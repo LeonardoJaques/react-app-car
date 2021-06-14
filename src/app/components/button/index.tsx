@@ -9,10 +9,10 @@ interface IButtonProps {
 
 const BaseButton = styled.button`
   ${tw`
-      pl-5
-      pr-5
-      pt-5
-      pb-5
+      pl-6
+      pr-6
+      pt-4
+      pb-4
       outline-none
       rounded-md
       text-white
