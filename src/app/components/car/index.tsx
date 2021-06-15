@@ -37,7 +37,7 @@ const CarThumbnail = styled.div`
 
   img {
     width: 100%;
-    height: auto;
+    height: 200px;
   }
 `;
 
@@ -55,13 +55,14 @@ const PricesContainer = styled.div`
   ${tw`
   w-full
   flex
-  justify-start
+  justify-center
   mt-3
 `}
 `;
 
 const SmallText = styled.p`
   color: inherit ${tw`
+  inline-flex
   text-xs
   font-thin
   `};
@@ -113,7 +114,7 @@ const CarInfo = styled.h6`
 `}
 `;
 
-const Seperator = styled.div`
+const Separator = styled.div`
   min-width: 100%;
   min-height: 1px;
 
@@ -152,15 +153,13 @@ function Car(props: ICarProps) {
       <CarName>{name}</CarName>
       <PricesContainer>
         <DailyPrice>
-          ${dailyPrice}
-          <SmallText>/Day</SmallText>
+          <SmallText>${dailyPrice} /Day</SmallText>
         </DailyPrice>
         <MonthlyPrice>
-          ${monthlyPrice}
-          <SmallText>/Month</SmallText>
+          <SmallText>${monthlyPrice} /Month</SmallText>
         </MonthlyPrice>
       </PricesContainer>
-      <Seperator />
+      <Separator />
       <CarDetailsContainer>
         <CarDetail>
           <SmallIcon>
